@@ -150,3 +150,29 @@ The purpose of a **getter** is to expose a private member variable outside of it
 Now in the file LocataionTester.java, we are allowed to access *lima*'s latitude by calling ```lima.getLatitude()``` (e.g. ```System.out.println(lima.getLatitude()));``` is allowed).
 
 We can provide a **setter** method to allow user change the values of member variables.  
+```java
+public class SimpleLocation{
+  private double latitude;
+  private double longitude;
+
+  public double getLatitude(){ // getter
+    ...
+  }
+  public void setLatitude(double lat){ // setter
+    this. latitude = lat;
+  }
+}
+```
+Having the getters and setters gives us more control of member variables. We can check and make sure a legal value is passed to latitude.
+```java
+public void setLatitude(double lat){
+  if(lat < -180 || lat > 180){ // out of range
+    System.out.println("Illegal value for latitude");
+  } else{
+    this. latitude = lat;
+  }
+}
+```
+
+#### Drawing Memory Models with Primitive Data  
+ 
