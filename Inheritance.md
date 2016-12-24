@@ -183,11 +183,11 @@ System.out.println(s);
 **Polymorphism** is a superclass reference to subclass object.
 
 UML:  
-Person| Student| Faculty|  
+Person | Student | Faculty |  
 ------|--------|--------|  
-String name| int StudentID| String employeeID|  
-String getName()| int getSID()| String getEID()|  
-String toString()| String toString()| String toString()|  
+String name | int StudentID | String employeeID |  
+String getName() | int getSID() | String getEID() |  
+String toString() | String toString() | String toString() |  
 
 ```java
 Person p[] = new Person[3];
