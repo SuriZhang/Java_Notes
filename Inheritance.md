@@ -206,10 +206,10 @@ for(int i = 0; i < p.length; ++i){
 
 
 **Compile Time Rules for Polymorphism**:    
-1. Compiler ONLY knows *reference type*
-2. Can only look in reference type class for method
-3. Outputs a method signature
+1. Compiler ONLY knows *reference type*  
+2. Can only look in reference type class for method  
+3. Outputs a method signature  
 
 **Run Time Rules for Polymorphism**:
-1. Follow exact *runtime type* of object to find method  
-2. Must match compile time method signature ti appropriate method in actual object's class
+1. Follow exact *runtime type* of object to find method    
+2. Must match compile time method signature ti appropriate method in actual object's class  
