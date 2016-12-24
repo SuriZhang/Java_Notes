@@ -189,3 +189,8 @@ SimpleLocation ucsd = new SimpleLocation(32.9, -117.2);
 
 
 #### Scope
+
+The **scope** of a variable is the area where it is defined to have a value.  
+**Local variables** are declared inside a method. Parameters behave like local variables. **Member variables** are declared outside any method, their scope is the entire class.  
+
+The keyword **new** is used to create a new object.
