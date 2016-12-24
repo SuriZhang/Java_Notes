@@ -213,3 +213,72 @@ for(int i = 0; i < p.length; ++i){
 **Run Time Rules for Polymorphism**:
 1. Follow exact *runtime type* of object to find method    
 2. Must match compile time method signature ti appropriate method in actual object's class  
+
+```java
+Person s = new Student("Cara", 1234);
+s.getID(); // will cause compile time error
+```
+
+**Casting** is an automatic type promotion (like ```int``` to ```double```).  
+Superclass ref = new Subclass(); <- **widening**  
+**Explicit casting** is like ```double``` to ```int```.  
+Subclass ref = (Subclass) superRef; <- **narrowing**
+
+In the last example, we can fix the compile time error by
+```java
+((Student) s). getSID(); // this works
+```
+
+A new example:
+```java
+Person s = new Person("Tim");
+((Student) s). getSID(); // Runtime error
+```
+
+Keyword **instanceof** provides runtime check of **is-a** relationship.  
+Example:
+```java
+if (s instanceof Student){
+   // only executes if s is-a Student at runtime
+   ((Student) s). getSID();
+}
+```
+
+Keyword **abstract** can make any class abstract, that is, cannot make instances of this type:  
+```java
+public abstract class Person{ ... }
+```  
+Class *must* be abstract if contains **abstract** method, and concrete subclasses *must* override this method:  
+```java
+public abstract void monthlyStatement(){ ... }
+```
+
+**Implementation** | **Interface** |
+-------------------| --------------|
+instance variables and methods which define common behavior | method signatures which define required behaviors |   
+
+*Note*: Abstract classes offer inheritance of both.
+
+**Interfaces** only define required methods, classes can inherit from multiple interfaces.  
+Example:  
+```java
+public interface Comparable<E>{
+  ...
+  public abstract int compareTo(E o);
+}
+```
+We can now compare two Person classes:
+```java
+public class Persom implements Comparable<Person>{
+  private String name;
+  ...
+
+  @Override
+  public int compareTo(Person o){
+    return this. getName(). compareTo(o. getName());
+  }
+}
+```
+*ProTip*:  
+1. if you just want to define a required method, use **interface**  
+2. if you want to define potentially required methods AND common behavior, use **abstract class**  
