@@ -182,7 +182,7 @@ System.out.println(s);
 
 **Polymorphism** is a superclass reference to subclass object.
 
-UML:
+UML:  
 Person| Student| Faculty|
 ------|--------|--------|
 String name| int StudentID| String employeeID|
