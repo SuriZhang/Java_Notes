@@ -205,7 +205,7 @@ for(int i = 0; i < p.length; ++i){
 > ABCD: Mia  
 
 
-**Compile Time Rules for Polymorphism**:  
+**Compile Time Rules for Polymorphism**:    
 1. Compiler ONLY knows *reference type*
 2. Can only look in reference type class for method
 3. Outputs a method signature
